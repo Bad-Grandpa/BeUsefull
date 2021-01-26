@@ -5,7 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Setter
@@ -13,10 +13,8 @@ import java.time.LocalDateTime;
 public class User {
     @Id
     private long id;
-    private String Login;
-    private String Email;
-    private String Password;
-    private String Type;
-    private LocalDateTime LastLoginDate;
-    private LocalDateTime CreationDate;
+    private String login;
+    private String email;
+    private String password;
+    private String type;
 }

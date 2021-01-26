@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
@@ -22,7 +23,7 @@ public class UserController {
     }
 
     @GetMapping("/users/{id}")
-    public User getUser(@PathVariable long id) {
-        throw new IllegalArgumentException("Not there yet!");
+    public Optional<User> getUser(@PathVariable long id) {
+        return userService.getUser(id);
     }
 }

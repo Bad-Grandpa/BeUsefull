@@ -1,9 +1,7 @@
 CREATE TABLE User (
-    ID BIGINT AUTO_INCREMENT PRIMARY KEY,
-    Login VARCHAR (30) NOT NULL,
-    Email VARCHAR (30) NOT NULL,
-    Password VARCHAR (30) NOT NULL,
-    Type VARCHAR (30) NOT NULL,
-    LastLoginDate VARCHAR (30) ,
-    CreationDate VARCHAR (30) NOT NULL
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    login VARCHAR (30) NOT NULL,
+    email VARCHAR (30) NOT NULL,
+    password VARCHAR (30) NOT NULL,
+    type VARCHAR (30) NOT NULL
 );
