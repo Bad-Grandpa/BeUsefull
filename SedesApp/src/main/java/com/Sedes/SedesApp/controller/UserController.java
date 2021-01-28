@@ -4,9 +4,7 @@ package com.Sedes.SedesApp.controller;
 import com.Sedes.SedesApp.model.User;
 import com.Sedes.SedesApp.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -25,5 +23,15 @@ public class UserController {
     @GetMapping("/users/{id}")
     public Optional<User> getUser(@PathVariable long id) {
         return userService.getUser(id);
+    }
+
+    @PostMapping("/users")
+    public User addUser(@RequestBody User user) {
+        return userService.addUser(user);
+    }
+
+    @PutMapping("/users")
+    public User editUser(@RequestBody User user) {
+        return userService.editUser(user);
     }
 }
