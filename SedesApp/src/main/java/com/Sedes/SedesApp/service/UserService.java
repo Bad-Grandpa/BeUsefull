@@ -38,4 +38,8 @@ public class UserService {
         userEdited.setType(user.getType());
         return userEdited;
     }
+
+    public void deleteUser(long id) {
+        userRepository.deleteById(id);
+    }
 }
